@@ -44,7 +44,7 @@ const updateUserById = (request, response) => {
     const { username,name, password } = request.body
   
     pool.query(
-      'UPDATE users SET username = $1, name = $2 , password = $3 WHERE id = $3',
+      'UPDATE users SET username = $1, name = $2 , password = $3 WHERE id = $4',
       [username,name, password, id],
       (error, results) => {
         if (error) {
