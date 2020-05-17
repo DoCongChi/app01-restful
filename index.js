@@ -15,7 +15,7 @@ app.get('/users', db.getUsersList)
 app.get('/users/:id', db.getUserById)
 app.post('/users', db.insertUser)
 app.put('/users/:id', db.updateUserById)
-app.delete('/cats/:id', db.deleteUser)
+app.delete('/users/:id', db.deleteUser)
 app.listen(port, () => {
     console.log(`App running on port ${port}.`)
   })
